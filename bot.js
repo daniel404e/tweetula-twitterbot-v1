@@ -4,6 +4,7 @@ const fs = require("fs");
 const { type } = require("os");
 const axios = require('axios');
 const cron = require('node-cron');
+var Twit = require('twit');
 
 
 
@@ -15,11 +16,55 @@ const tclient = new TwitterApi({
     accessSecret: "g0bS4Kr4vZ4VibQ2vn9kIzmwW3As5urknHSKxROCltI2I"
 })
 
+var T = new Twit({
+    consumer_key:         'MKniYmFVtiJSnjfugqrcZi3UA',
+    consumer_secret:      'RVmblI43zKZztx9mur0jaBb0hkzuojhnPG9YSnXUnPeJxAtUsE',
+    access_token:         '1112721153770962944-vvOWdHGjQrVwkwxNA0mPMXzxfq6IQF',
+    access_token_secret:  'g0bS4Kr4vZ4VibQ2vn9kIzmwW3As5urknHSKxROCltI2I',
+    timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
+    strictSSL:            true,     // optional - requires SSL certificates to be valid.
+  })
+
 
 
 const rwclient = tclient.readWrite ;
 
  
+
+
+
+
+
+T.get('search/tweets', { q: 'russia', count: 100 ,tweet_mode: 'extended' }, function(err, data, response) {
+           
+            // let text = status["retweeted_status"]["full_text"];
+           //console.log(data.statuses);
+           n=0;
+           data.statuses.forEach(element => {
+                   
+            if(element.retweeted_status)
+            {
+            console.log(element.retweeted_status.full_text);
+            console.log('\n');
+            }
+            else
+            {
+                console.log(element.full_text);
+                console.log('\n');
+
+            }
+            
+            console.log(n);
+            n++;
+
+           });
+  })
+
+
+
+
+
+
 
 function tweet(totweet)
 {

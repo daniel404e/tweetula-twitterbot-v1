@@ -12,6 +12,7 @@
     "axios": "^0.26.0",
     "fs": "^0.0.1-security",
     "node-cron": "^3.0.0",
+    "twit": "^2.2.11",
     "twitter-api-v2": "^1.11.0"
   }
 }
