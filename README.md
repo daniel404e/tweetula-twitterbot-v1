@@ -6,9 +6,12 @@ you would need a twitter developer account for this
  
  replace the variable with your own from twitter dev account
  >appKey 
+
  >appSecret 
- >accessToken 
- >accessSecret 
+
+>accessToken 
+
+>accessSecret 
 
 to install dependeccies 
 >npm i 
