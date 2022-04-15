@@ -10,17 +10,17 @@ var Twit = require('twit');
 
 const tclient = new TwitterApi({
 
-    appKey: "MKniYmFVtiJSnjfugqrcZi3UA",
-    appSecret: "RVmblI43zKZztx9mur0jaBb0hkzuojhnPG9YSnXUnPeJxAtUsE",
-    accessToken: "1112721153770962944-vvOWdHGjQrVwkwxNA0mPMXzxfq6IQF",
-    accessSecret: "g0bS4Kr4vZ4VibQ2vn9kIzmwW3As5urknHSKxROCltI2I"
+    appKey: "",
+    appSecret: "",
+    accessToken: "",
+    accessSecret: ""
 })
 
 var T = new Twit({
-    consumer_key:         'MKniYmFVtiJSnjfugqrcZi3UA',
-    consumer_secret:      'RVmblI43zKZztx9mur0jaBb0hkzuojhnPG9YSnXUnPeJxAtUsE',
-    access_token:         '1112721153770962944-vvOWdHGjQrVwkwxNA0mPMXzxfq6IQF',
-    access_token_secret:  'g0bS4Kr4vZ4VibQ2vn9kIzmwW3As5urknHSKxROCltI2I',
+    consumer_key:         '',
+    consumer_secret:      '',
+    access_token:         '',
+    access_token_secret:  '',
     timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
     strictSSL:            true,     // optional - requires SSL certificates to be valid.
   })
