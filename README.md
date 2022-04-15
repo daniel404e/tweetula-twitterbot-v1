@@ -19,3 +19,7 @@ to install dependeccies
 
 to start the code 
 >node bot.js
+
+
+
+you can also create a web worker in any hosting servies [has a proc file is you choose heroku] 
